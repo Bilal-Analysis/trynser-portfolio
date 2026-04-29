@@ -1,0 +1,11 @@
+@import "tailwindcss";
+:root { --background: #050505; --foreground: #fcfcfc; --accent-cyan: #00f2ff; --accent-purple: #bc13fe; --glass-bg: rgba(255, 255, 255, 0.03); --glass-border: rgba(255, 255, 255, 0.1); }
+@theme inline { --color-background: var(--background); --color-foreground: var(--foreground); --color-cyan-glow: var(--accent-cyan); --color-purple-glow: var(--accent-purple); }
+body { background-color: var(--background); color: var(--foreground); overflow-x: hidden; cursor: crosshair; }
+.glass-panel { background: var(--glass-bg); backdrop-filter: blur(16px); border: 1px solid var(--glass-border); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8); }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.text-glow-cyan { text-shadow: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.2); }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
